@@ -1,0 +1,8 @@
+html,body{height:100%;}
+html,body,div{margin:0;padding:0;border:0;outline:0;background:transparent;}
+body{
+    background-color:#4e3070;
+    background-image: -moz-radial-gradient(center,circle cover,#6d459b 0,#4e3070 100%);
+    background-image: -webkit-gradient(radial,50% 50%,0,50% 50%,1000,from(#6d459b),to(#4e3070));
+}
+div{text-align:center;padding:100px 0 0;}
