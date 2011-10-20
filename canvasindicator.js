@@ -5,7 +5,9 @@
  *
  * By Sergey Toy http://toydestroyer.com/
  * Concept by http://starkravingcoder.blogspot.com/2007/09/canvas-loading-indicator.html
- * 
+ *
+ * tmp
+ *
  * Usage:
  * 
  *      new CanvasIndicator(el,{
