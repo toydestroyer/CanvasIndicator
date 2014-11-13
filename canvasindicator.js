@@ -6,10 +6,9 @@
  * By Sergey Toy http://toydestroyer.com/
  * Concept by http://starkravingcoder.blogspot.com/2007/09/canvas-loading-indicator.html
  *
- * tmp
  *
  * Usage:
- * 
+ *
  *      new CanvasIndicator(el,{
  *          bars:11,
  *          innerRadius:4,
@@ -17,7 +16,7 @@
  *          rgb:[0,0,0],
  *          fps:10
  *      });
- *    
+ *
  * Options:
  *
  *        bars - number of bars
@@ -54,7 +53,7 @@ function CanvasIndicator(el,opt){
         obj.draw(obj.currentOffset);
         setTimeout(function(){nextAnimation(obj);},1000/obj.opt.fps);
     })(this);
-    
+
 }
 CanvasIndicator.prototype.makeRGBA=function(){return "rgba("+[].slice.call(arguments,0).join(",")+")";}
 CanvasIndicator.prototype.drawBlock=function(barNo){
