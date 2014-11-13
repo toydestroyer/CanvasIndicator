@@ -22,4 +22,3 @@ new CanvasIndicator(el, {
 * `size` — array(width,height)
 * `rgb` — array(red,green,blue)
 * `fps` — approximate frames per second of the pulsing
-
