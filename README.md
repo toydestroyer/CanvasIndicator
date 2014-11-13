@@ -1,10 +1,13 @@
 # CanvasIndicator
-A simple Javascript widget to create loading animation using a Canvas element.
+**NOTE:** I wrote this code back in 2011 and it no longer support.
+
+A simple JavaScript widget to create loading animation using a Canvas element.
+
 Inspired by http://starkravingcoder.blogspot.com/2007/09/canvas-loading-indicator.html
 
 * Works over varied backgrounds such as gradients and patterns.
 * Control the look, size and speed of the loading animation.
-* Framework independent, use plain Javascript.
+* Framework independent, use plain JavaScript.
 
 ## Usage:
 ```javascript
