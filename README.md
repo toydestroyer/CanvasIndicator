@@ -1,5 +1,5 @@
 # CanvasIndicator
-**NOTE:** I wrote this code back in 2011 and it was writen just for fun. I don't think you'll find this helpful so if you look for widget like this — check out [NETEYE Activity Indicator](http://neteye.github.io/activity-indicator.html).
+**NOTE:** I wrote this code back in 2011 and it was writen just for fun. I don't think you'll find this helpful so if you look for widget like this — check out alternatives below.
 
 A simple JavaScript widget to create loading animation using a Canvas element.<br>
 Inspired by http://starkravingcoder.blogspot.com/2007/09/canvas-loading-indicator.html
@@ -24,6 +24,16 @@ new CanvasIndicator(el, {
 * `size` — array(width,height)
 * `rgb` — array(red,green,blue)
 * `fps` — approximate frames per second of the pulsing
+
+## Alternatives
+I consider that rotating PNG or SVG image with CSS is best solution. But if you still looking for JavaScript widget, here is some of them:
+
+* [spin.js](http://fgnass.github.io/spin.js/)
+* [NETEYE Activity Indicator](http://neteye.github.io/activity-indicator.html)
+* [Canvas Loader JS](http://jamund.com/canvas-loader/no.jquery.html)
+* [busy.js](http://www.netzgesta.de/busy/)
+
+
 
 ## License
 The MIT License (MIT)
