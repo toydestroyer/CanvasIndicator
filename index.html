@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>CanvasIndicator Example</title>
-        <link type="text/css" rel="stylesheet" href="example.css">
-        <script type="text/javascript" src="canvasindicator.js"></script>
-        <script type="text/javascript" src="example.js"></script>
-    </head>
-    <body>
-        <div>
-            <canvas id="loader"></canvas>
-        </div>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <title>CanvasIndicator Example</title>
+    <style type="text/css">
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #4e3070;
+        background-image: -moz-radial-gradient(center,circle cover,#6d459b 0,#4e3070 100%);
+        background-image: -webkit-gradient(radial,50% 50%,0,50% 50%,1000,from(#6d459b),to(#4e3070));
+      }
+      div {
+        text-align: center;
+        padding: 100px 0 0;
+      }
+    </style>
+    <script type="text/javascript" src="canvasindicator.js"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        new CanvasIndicator(document.getElementById("loader"), {
+            bars: 14,
+            innerRadius: 50,
+            size: [10, 100],
+            rgb: [255, 255, 255],
+            fps: 10
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <canvas id="loader"></canvas>
+    </div>
+  </body>
 </html>
