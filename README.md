@@ -1,5 +1,5 @@
 # CanvasIndicator
-**NOTE:** I wrote this code back in 2011 and it was writen just for fun. I don't think you'll find this helpful so if you look for widget like this — check out alternatives below.
+**NOTE:** I wrote this code back in 2011 and it was writen just for fun. I don't think you'll find this helpful so if you look for widget like this — check out [alternatives below](#alternatives).
 
 A simple JavaScript widget to create loading animation using a Canvas element.<br>
 Inspired by http://starkravingcoder.blogspot.com/2007/09/canvas-loading-indicator.html
