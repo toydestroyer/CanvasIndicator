@@ -20,9 +20,9 @@ new CanvasIndicator(el, {
 ```
 ### Options
 * `bars` — number of bars
-* `innerRadius` — inner radius (px)
-* `size` — array(width,height)
-* `color` — color string #fff, #ffffff, white
+* `innerRadius` — inner radius (`px`)
+* `size` — `array(width, height)` in `px`
+* `color` — color string `#fff`, `#ffffff`, `white` or any other valid color declaration
 * `fps` — approximate frames per second of the pulsing
 
 ## Alternatives
