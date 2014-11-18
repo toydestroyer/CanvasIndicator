@@ -1,5 +1,5 @@
 /**
- * Canvas Indicator 1.0
+ * Canvas Indicator 1.1
  *
  * Creates an alternative to ajax loader images with the canvas element.
  *
@@ -13,7 +13,7 @@
  *          bars:11,
  *          innerRadius:4,
  *          size:[2,5],
- *          rgb:[0,0,0],
+ *          color: 'white',
  *          fps:10
  *      });
  *
@@ -22,7 +22,7 @@
  *        bars - number of bars
  *        innerRadius - inner radius (px)
  *        size - array(width,height)
- *        rgb - array(red,green,blue)
+ *        color - color string #fff, #ffffff, white
  *        fps - approximate frames per second of the pulsing
  *
  **/
@@ -34,14 +34,14 @@ function CanvasIndicator(el,opt){
         bars:11,
         innerRadius:4,
         size:[2,5],
-        rgb:[255,255,255],
+        color: '#fff',
         fps:10
     }
     if(typeof(opt)=='object'){
         defaults.bars=opt.bars?opt.bars:defaults.bars;
         defaults.innerRadius=opt.innerRadius?opt.innerRadius:defaults.innerRadius;
         defaults.size=opt.size?opt.size:defaults.size;
-        defaults.rgb=opt.rgb?opt.rgb:defaults.rgb;
+        defaults.color=opt.color?opt.color:defaults.color;
         defaults.fps=opt.fps?opt.fps:defaults.fps;
     }
     this.opt=defaults;
@@ -55,9 +55,10 @@ function CanvasIndicator(el,opt){
     })(this);
 
 }
-CanvasIndicator.prototype.makeRGBA=function(){return "rgba("+[].slice.call(arguments,0).join(",")+")";}
+CanvasIndicator.prototype.makeRGBA=function(){return "rgba("+[].slice.call(arguments,0).join(",")+")";} // deprecated
 CanvasIndicator.prototype.drawBlock=function(barNo){
-    this.ctx.fillStyle=this.makeRGBA(this.opt.rgb[0],this.opt.rgb[1],this.opt.rgb[2],(this.opt.bars+1-barNo)/(this.opt.bars+1));
+    this.ctx.fillStyle=this.opt.color//this.makeRGBA(this.opt.rgb[0],this.opt.rgb[1],this.opt.rgb[2],(this.opt.bars+1-barNo)/(this.opt.bars+1));
+    this.ctx.globalAlpha = (this.opt.bars+1-barNo)/(this.opt.bars+1);
     this.ctx.fillRect(-this.opt.size[0]/2,0,this.opt.size[0],this.opt.size[1]);
 }
 CanvasIndicator.prototype.calculatePosition=function(barNo){
