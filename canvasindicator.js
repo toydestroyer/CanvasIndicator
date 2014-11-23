@@ -42,11 +42,11 @@
           fps: 10
       }
       if (typeof(opt) == 'object') {
-          defaults.bars = opt.bars ? opt.bars : defaults.bars;
-          defaults.innerRadius = opt.innerRadius ? opt.innerRadius : defaults.innerRadius;
-          defaults.size = opt.size ? opt.size : defaults.size;
-          defaults.color = opt.color ? opt.color : defaults.color;
-          defaults.fps = opt.fps ? opt.fps : defaults.fps;
+        for (var key in opt) {
+          if (opt.hasOwnProperty(key)) {
+            defaults[key] = opt[key];
+          }
+        }
       }
       this.opt = defaults;
       this.w = this.opt.size[1] + this.opt.innerRadius;
