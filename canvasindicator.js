@@ -52,6 +52,7 @@
       this.w = this.opt.size[1] + this.opt.innerRadius;
       el.setAttribute("width", this.w * 2);
       el.setAttribute("height", this.w * 2);
+      /* TODO: requestAnimationFrame ? */
       (function nextAnimation(obj) {
           obj.currentOffset = (obj.currentOffset + 1) % obj.opt.bars;
           obj.draw(obj.currentOffset);
