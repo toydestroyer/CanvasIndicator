@@ -9,7 +9,7 @@
  *
  * Usage:
  *
- *      new CanvasIndicator(el,{
+ *      new CanvasIndicator(el, {
  *          bars:11,
  *          innerRadius:4,
  *          size:[2,5],
@@ -32,6 +32,11 @@
   'use strict';
 
   function CanvasIndicator(el, opt) {
+
+    if (typeof el === "string") {
+      el = document.getElementById(el);
+    }
+
       this.ctx = el.getContext("2d");
       this.currentOffset = 0;
       var defaults = {
