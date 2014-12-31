@@ -9,7 +9,7 @@
  *
  * Usage:
  *
- *      new CanvasIndicator(el,{
+ *      new CanvasIndicator(el, {
  *          bars:11,
  *          innerRadius:4,
  *          size:[2,5],
@@ -32,6 +32,11 @@
   'use strict';
 
   function CanvasIndicator(el, opt) {
+
+    if (typeof el === "string") {
+      el = document.getElementById(el);
+    }
+
       this.ctx = el.getContext("2d");
       this.currentOffset = 0;
       var defaults = {
@@ -52,7 +57,6 @@
       this.w = this.opt.size[1] + this.opt.innerRadius;
       el.setAttribute("width", this.w * 2);
       el.setAttribute("height", this.w * 2);
-      /* TODO: requestAnimationFrame ? */
       (function nextAnimation(obj) {
           obj.currentOffset = (obj.currentOffset + 1) % obj.opt.bars;
           obj.draw(obj.currentOffset);
